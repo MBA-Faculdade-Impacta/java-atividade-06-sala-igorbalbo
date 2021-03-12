@@ -1,10 +1,7 @@
 package br.com.impacta.lab;
-
 import java.util.ArrayList;
 import br.com.impacta.models.*;
-
 public class JavaSpringTemplateApplication {
-
 	public static void main(String[] args) {
 		/*
 		 * Transforme a tabela produto em uma classe separadas
@@ -42,17 +39,45 @@ public class JavaSpringTemplateApplication {
 		 * Abaixo um pedaço do exercicio como base
 		 */
 		ArrayList<Produto> listaDeProdutos = new ArrayList<>();
-		
-		Produto produto = new Produto();
-		produto.codigo = 1;
-		produto.descricao = "Camisa";
-		produto.valor = 70.00;
-		
-		listaDeProdutos.add(produto);
-		
+    
+    Produto camisa = new Produto();
+		camisa.codigo = 1;
+		camisa.descricao = "Camisa";
+		camisa.valor = 70.00;
+
+    listaDeProdutos.add(camisa);
+
+    Produto shorts = new Produto();
+		shorts.codigo = 2;
+		shorts.descricao = "Shorts";
+		shorts.valor = 57.50;
+
+		listaDeProdutos.add(shorts);
+
+    Produto meia = new Produto();
+		meia.codigo = 3;
+		meia.descricao = "Meia";
+		meia.valor = 9.99;
+
+		listaDeProdutos.add(meia);
+
+    Produto toca = new Produto();
+		toca.codigo = 4;
+		toca.descricao = "Toca";
+		toca.valor = 35.00;
+
+		listaDeProdutos.add(toca);
+
+    Produto luvas = new Produto();
+		luvas.codigo = 1;
+		luvas.descricao = "Luvas";
+		luvas.valor = 19.50;
+
+		listaDeProdutos.add(luvas);
+
 		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 1);
-		
-		System.out.println(produtoEncontrado);
+
+    System.out.println("teste " + produtoEncontrado);
 	}
 
 }
